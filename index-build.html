@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Angular2 JSPM</title>
+    <base href="/index-build.html">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Tether needed by bootstrap4 and lock7 for auth sign in modal-->
+    <script src="jspm_packages/github/hubspot/tether@1.1.1/dist/js/tether.js"></script>
+    <script src="http://cdn.auth0.com/js/lock-7.min.js"></script>
+
+    <script src="/jspm_packages/system.js"></script>
+    <script src="/config.js"></script>
+    <script src="/build/build.js"></script>
+</head>
+
+<body>
+    <app>loading...</app>
+</body>
+<script>
+    System.import("shims")
+			.then(function() {
+				return System.import("app")				
+			})
+            .catch(function(err) {
+				console.log('Error: ', err);
+			});
+
+</script>
+
+</html>

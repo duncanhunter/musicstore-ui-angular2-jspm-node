@@ -1,0 +1,13 @@
+.ms-jumbotron {
+	padding:35px 0;
+}
+
+a {
+    color: rgba(207, 70, 67, 0.701961);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #818a91;
+    text-decoration: none;
+}

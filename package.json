@@ -1,0 +1,71 @@
+{
+  "name": "ng2",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "jspm install",
+    "start": "live-server --port=5000 --host=localhost",
+    "bundle-sfx": "jspm bundle-sfx shims + app build/build-sfx.js --minify && live-server --open=./index-sfx.html --port=5000 --host=localhost",
+    "bundle": "jspm bundle shims + app build/build.js --minify  && live-server --open=./index-build.html --port=5000 --host=localhost",
+    "test": "karma start"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-beta.0",
+      "bootstrap": "github:twbs/bootstrap@4.0.0-alpha.2",
+      "clean-css": "npm:clean-css@^3.4.8",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "es6-promise": "npm:es6-promise@^3.0.2",
+      "es6-shim": "npm:es6-shim@^0.33.13",
+      "font-awesome": "npm:font-awesome@^4.5.0",
+      "jquery": "github:components/jquery@^2.1.4",
+      "moment": "npm:moment@^2.10.6",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.2",
+      "rxjs": "npm:rxjs@^5.0.0-beta.0",
+      "tether": "github:hubspot/tether@^1.1.1",
+      "text": "github:systemjs/plugin-text@^0.0.4",
+      "toastr": "github:CodeSeven/toastr@^2.1.2",
+      "ts": "npm:plugin-typescript@2.4.3",
+      "twbs": "github:twbs/bootstrap",
+      "zone.js": "npm:zone.js@^0.5.10"
+    },
+    "devDependencies": {
+      "false": "npm:babel-core@^5.8.24",
+      "false-runtime": "npm:babel-runtime@^5.8.24",
+      "typescript": "npm:typescript@^1.7.5"
+    },
+    "overrides": {
+      "github:twbs/bootstrap@4.0.0-alpha.2": {
+        "shim": {
+          "js/bootstrap.js": {
+            "deps": [
+              "tether/dist/js/tehter.js"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "angular2": "^2.0.0-beta.0",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "jasmine-core": "^2.4.1",
+    "jspm": "^0.16.19",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-jspm": "^2.0.2",
+    "karma-phantomjs2-launcher": "^0.3.2",
+    "live-server": "^0.9.0",
+    "phantomjs2": "^2.0.2",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "tsc": "^1.7.5",
+    "typescript": "^1.7.5"
+  }
+}

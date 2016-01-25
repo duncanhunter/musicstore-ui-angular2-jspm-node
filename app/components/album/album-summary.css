@@ -1,0 +1,19 @@
+.card:hover {
+	cursor: pointer;
+}
+
+.card {
+  float: left;
+  padding: .75rem;
+  margin: 0.25rem;
+  background-color: #fff;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 75%;
+}
+
